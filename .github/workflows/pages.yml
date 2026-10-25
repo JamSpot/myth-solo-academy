@@ -1,0 +1,49 @@
+name: Deploy MYTH Solo Academy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Check required website files
+        run: |
+          test -f index.html
+          test -f assets/site.css
+          test -f assets/site.js
+          test -f pages/start-here.html
+          test -f pages/first-adventure.html
+          test -f pages/darkness.html
+          test -f pages/heroes.html
+          test -f pages/research.html
+          echo "Required multi-page website files are present."
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
