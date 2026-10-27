@@ -1,6 +1,6 @@
 # MYTH Solo Academy
 
-An independent, edition-aware learning guide for playing the MYTH cooperative fantasy board game solo. The first milestone focuses on beginner instruction and a working multi-page website; advanced rules research will follow.
+An independent learning guide for playing the MYTH 2.0 cooperative fantasy board game solo, using the MYTH 2.0 rulebook and matching MYTH 2.0 cards. The first milestone focuses on beginner instruction and a working multi-page website; advanced rules research will follow.
 
 ## Pages
 - Home: project overview and learning path
@@ -10,8 +10,8 @@ An independent, edition-aware learning guide for playing the MYTH cooperative fa
 - Heroes & Cards: hero tactics research roadmap
 - Research Library: sources, edition distinctions and research backlog
 
-## Editions
-Do not assume original MERCS-era MYTH, MYTH 2.0 and Dawn of Heroes are interchangeable. Guides must name the relevant edition and source. The current beginner pages deliberately avoid unverified numeric rules details.
+## Ruleset policy
+**This academy uses MYTH 2.0 only.** All instructions must be based on the MYTH 2.0 rulebook and matching MYTH 2.0 cards, with official clarifications noted where relevant. Do not use original first-edition procedures or Dawn of Heroes / Orphans of Ovenstein rules as authority. When a 2.0 rule has not yet been verified, mark it unresolved rather than guessing.
 
 ## Local preview
 Serve the repository root with any static web server, for example:
@@ -21,7 +21,13 @@ Then open `http://localhost:8000`. For a local preview at the repository root, t
 ## GitHub Pages
 The workflow in `.github/workflows/pages.yml` builds a static Pages artifact and deploys it on pushes to `main`. In repository Settings → Pages, select **GitHub Actions** as the build and deployment source if it is not already configured.
 
-## Sources
+## MYTH 2.0 rules and cards
+- [MYTH 2.0 Boardgame Rules — DriveThruCards](https://www.drivethrucards.com/product/323379/Myth-20-Boardgame-Rules)
+- [Acolyte Hero Deck](https://www.drivethrucards.com/product/320006/Myth-20--Hero-Deck--Acolyte), [Apprentice](https://www.drivethrucards.com/product/320657/Myth-20--Hero-Deck--Apprentice), [Archer](https://www.drivethrucards.com/product/320658/Myth-20--Hero-Deck--Archer), [Brigand](https://www.drivethrucards.com/product/320659/Myth-20--Hero-Deck--Brigand), [Soldier](https://www.drivethrucards.com/product/320660/Myth-20--Hero-Deck--Soldier)
+- [Item Decks](https://www.drivethrucards.com/product/320661/Myth-20--Item-Decks), [Additional Cards](https://www.drivethrucards.com/product/320662/Myth-20--Additional-Cards)
+- [Official MYTH: Journeyman FAQ](https://ulisses-spiele.de/myth-journeyman-faq/)
+
+## Background sources (not rules authority for this guide)
 - [Ulisses Spiele — MYTH](https://ulisses-spiele.de/game-system/myth/)
 - [MYTH: Journeyman FAQ](https://ulisses-spiele.de/myth-journeyman-faq/)
 - [Ulisses Games — Myth](https://ulisses-us.com/games/myth/)
