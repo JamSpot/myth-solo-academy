@@ -33,6 +33,14 @@ jobs:
           test -f pages/heroes.html
           test -f pages/research.html
           echo "Required multi-page website files are present."
+      - name: Guard MYTH 2.0 edition scope
+        run: |
+          for file in index.html pages/*.html; do
+            grep -q 'MYTH 2.0' "$file" || { echo "Missing MYTH 2.0 scope marker: $file" >&2; exit 1; }
+          done
+          ! grep -q 'This academy starts with the original MERCS-era game' index.html
+          ! grep -q 'relevant original rules and enemy cards' pages/darkness.html
+          echo "MYTH 2.0 scope markers present; known mixed-edition wording absent."
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
